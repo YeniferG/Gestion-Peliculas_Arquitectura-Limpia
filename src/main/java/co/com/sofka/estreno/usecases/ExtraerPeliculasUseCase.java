@@ -1,7 +1,7 @@
 package co.com.sofka.estreno.usecases;
 
 import co.com.sofka.estreno.domain.estreno.Estreno;
-import co.com.sofka.estreno.domain.estreno.command.ExtractPeliculaCommand;
+import co.com.sofka.estreno.domain.estreno.command.ExtraerPeliculaCommand;
 import co.com.sofka.estreno.domain.generic.DomainEvent;
 import co.com.sofka.estreno.domain.generic.EventStoreRepository;
 import org.jsoup.Connection;
@@ -17,19 +17,19 @@ import java.util.UUID;
 import java.util.function.Function;
 
 @Dependent
-public class ExtractPeliculasUseCase implements Function<ExtractPeliculaCommand, List<DomainEvent>> {
+public class ExtraerPeliculasUseCase implements Function<ExtraerPeliculaCommand, List<DomainEvent>> {
 
     private final EventStoreRepository repository;
 
     private static final String URL_BASE = "https://pelisplus.so/estrenos";
 
 
-    public ExtractPeliculasUseCase(EventStoreRepository repository) {
+    public ExtraerPeliculasUseCase(EventStoreRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public List<DomainEvent> apply(ExtractPeliculaCommand command) {
+    public List<DomainEvent> apply(ExtraerPeliculaCommand command) {
 
         var estreno = Estreno.from(command.getEstrenoId(),
                 repository.getEventsBy("estreno", command.getEstrenoId()));
@@ -57,7 +57,7 @@ public class ExtractPeliculasUseCase implements Function<ExtractPeliculaCommand,
                 String generos = documentPelicula.getElementsByClass("content-type-a").text();
 
                 System.out.println("URL VIDEO: " + urlVideos);
-                estreno.addPelicula(UUID.randomUUID().toString().substring(0,10), titulo, datosPelicula[1], datosPelicula[3]+" "+datosPelicula[4], generos, sipnosis, urlVideos);
+                estreno.agregarPelicula(UUID.randomUUID().toString().substring(0,10), titulo, datosPelicula[1], datosPelicula[3]+" "+datosPelicula[4], generos, sipnosis, urlVideos);
 
             }
 

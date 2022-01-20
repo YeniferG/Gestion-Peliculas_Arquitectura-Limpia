@@ -1,7 +1,7 @@
 package co.com.sofka.estreno.domain.estreno;
 
-import co.com.sofka.estreno.domain.estreno.event.EstrenoCreated;
-import co.com.sofka.estreno.domain.estreno.event.PeliculaAdded;
+import co.com.sofka.estreno.domain.estreno.event.EstrenoCreado;
+import co.com.sofka.estreno.domain.estreno.event.PeliculaAgregada;
 import co.com.sofka.estreno.domain.generic.AggregateRoot;
 import co.com.sofka.estreno.domain.generic.DomainEvent;
 
@@ -16,7 +16,7 @@ public class Estreno extends AggregateRoot {
     public Estreno(String id, String name){
         super(id);
         subscribe(new EstrenoEventChange(this));
-        appendChange(new EstrenoCreated(id, name)).apply();
+        appendChange(new EstrenoCreado(id, name)).apply();
     }
 
     private Estreno(String id){
@@ -30,8 +30,8 @@ public class Estreno extends AggregateRoot {
         return estreno;
     }
 
-    public void addPelicula(String peliculaId, String titulo, String anio, String duracion, String genero, String sipnosis, String videoURL) {
-        appendChange(new PeliculaAdded(peliculaId, titulo, anio, duracion, genero, sipnosis, videoURL)).apply();
+    public void agregarPelicula(String peliculaId, String titulo, String anio, String duracion, String genero, String sipnosis, String videoURL) {
+        appendChange(new PeliculaAgregada(peliculaId, titulo, anio, duracion, genero, sipnosis, videoURL)).apply();
     }
 
     public Pelicula findPeliculaById(String id) {

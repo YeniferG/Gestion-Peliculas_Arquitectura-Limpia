@@ -1,8 +1,8 @@
 package co.com.sofka.estreno.infra.materialize;
 
 
-import co.com.sofka.estreno.domain.estreno.event.EstrenoCreated;
-import co.com.sofka.estreno.domain.estreno.event.PeliculaAdded;
+import co.com.sofka.estreno.domain.estreno.event.EstrenoCreado;
+import co.com.sofka.estreno.domain.estreno.event.PeliculaAgregada;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.model.Filters;
@@ -22,8 +22,8 @@ public class EstrenoHandle {
         this.mongoClient = mongoClient;
     }
 
-    @ConsumeEvent(value = "sofka.estreno.estrenocreated", blocking = true)
-    void consumeEstrenoCreated(EstrenoCreated event) {
+    @ConsumeEvent(value = "sofka.estreno.estrenocreado", blocking = true)
+    void consumeEstrenoCreated(EstrenoCreado event) {
         Map<String, Object> document = new HashMap<>();
         document.put("_id", event.getAggregateId());
         document.put("name", event.getNombre());
@@ -33,8 +33,8 @@ public class EstrenoHandle {
                 .insertOne(new Document(document));
     }
 
-    @ConsumeEvent(value = "sofka.estreno.peliculaadded", blocking = true)
-    void consumePeliculaAdded(PeliculaAdded event) {
+    @ConsumeEvent(value = "sofka.estreno.peliculaagregada", blocking = true)
+    void consumePeliculaAdded(PeliculaAgregada event) {
         BasicDBObject document = new BasicDBObject();
         document.put("pelicula."+event.getTitulo()+".titulo", event.getTitulo());
         document.put("pelicula."+event.getTitulo()+".anio", event.getAnio());

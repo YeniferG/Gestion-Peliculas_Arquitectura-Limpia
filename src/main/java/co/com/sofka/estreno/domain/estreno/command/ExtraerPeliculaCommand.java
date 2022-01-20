@@ -2,11 +2,11 @@ package co.com.sofka.estreno.domain.estreno.command;
 
 import co.com.sofka.estreno.domain.generic.Command;
 
-public class ExtractPeliculaCommand extends Command {
+public class ExtraerPeliculaCommand extends Command {
 
     private String estrenoId;
 
-    public ExtractPeliculaCommand() {
+    public ExtraerPeliculaCommand() {
     }
 
     public String getEstrenoId() {

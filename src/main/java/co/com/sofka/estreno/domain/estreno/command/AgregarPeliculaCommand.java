@@ -2,7 +2,7 @@ package co.com.sofka.estreno.domain.estreno.command;
 
 import co.com.sofka.estreno.domain.generic.Command;
 
-public class AddPeliculaCommand extends Command {
+public class AgregarPeliculaCommand extends Command {
 
     private String estrenoId;
     private String peliculaId;
@@ -13,7 +13,7 @@ public class AddPeliculaCommand extends Command {
     private String sipnosis;
     private String videoURL;
 
-    public AddPeliculaCommand(){}
+    public AgregarPeliculaCommand(){}
 
     public String getEstrenoId() {
         return estrenoId;

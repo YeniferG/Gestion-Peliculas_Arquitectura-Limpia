@@ -2,7 +2,7 @@ package co.com.sofka.estreno.domain.estreno.event;
 
 import co.com.sofka.estreno.domain.generic.DomainEvent;
 
-public class PeliculaAdded extends DomainEvent {
+public class PeliculaAgregada extends DomainEvent {
 
     private final String peliculaId;
     private final String titulo;
@@ -12,8 +12,8 @@ public class PeliculaAdded extends DomainEvent {
     private final String sipnosis;
     private final String videoURL;
 
-    public PeliculaAdded(String peliculaId, String titulo, String anio, String duracion, String genero, String sipnosis, String videoURL) {
-        super("sofka.estreno.peliculaadded");
+    public PeliculaAgregada(String peliculaId, String titulo, String anio, String duracion, String genero, String sipnosis, String videoURL) {
+        super("sofka.estreno.peliculaagregada");
         this.peliculaId = peliculaId;
         this.titulo = titulo;
         this.anio = anio;

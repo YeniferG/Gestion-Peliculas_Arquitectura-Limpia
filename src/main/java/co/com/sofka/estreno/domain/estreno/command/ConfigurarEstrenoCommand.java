@@ -2,7 +2,7 @@ package co.com.sofka.estreno.domain.estreno.command;
 
 import co.com.sofka.estreno.domain.generic.Command;
 
-public class ConfigureEstrenoCommand extends Command {
+public class ConfigurarEstrenoCommand extends Command {
 
     private String estrenoId;
     private String nombre;
