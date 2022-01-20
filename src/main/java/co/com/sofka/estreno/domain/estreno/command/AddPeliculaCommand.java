@@ -4,24 +4,16 @@ import co.com.sofka.estreno.domain.generic.Command;
 
 public class AddPeliculaCommand extends Command {
 
-    private String peliculaId;
     private String estrenoId;
+    private String peliculaId;
     private String titulo;
     private String anio;
     private String duracion;
-    private String sipnosis;
     private String genero;
+    private String sipnosis;
     private String videoURL;
 
     public AddPeliculaCommand(){}
-
-    public String getPeliculaId() {
-        return peliculaId;
-    }
-
-    public void setPeliculaId(String peliculaId) {
-        this.peliculaId = peliculaId;
-    }
 
     public String getEstrenoId() {
         return estrenoId;
@@ -29,6 +21,14 @@ public class AddPeliculaCommand extends Command {
 
     public void setEstrenoId(String estrenoId) {
         this.estrenoId = estrenoId;
+    }
+
+    public String getPeliculaId() {
+        return peliculaId;
+    }
+
+    public void setPeliculaId(String peliculaId) {
+        this.peliculaId = peliculaId;
     }
 
     public String getTitulo() {
@@ -55,20 +55,20 @@ public class AddPeliculaCommand extends Command {
         this.duracion = duracion;
     }
 
-    public String getSipnosis() {
-        return sipnosis;
-    }
-
-    public void setSipnosis(String sipnosis) {
-        this.sipnosis = sipnosis;
-    }
-
     public String getGenero() {
         return genero;
     }
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public String getSipnosis() {
+        return sipnosis;
+    }
+
+    public void setSipnosis(String sipnosis) {
+        this.sipnosis = sipnosis;
     }
 
     public String getVideoURL() {

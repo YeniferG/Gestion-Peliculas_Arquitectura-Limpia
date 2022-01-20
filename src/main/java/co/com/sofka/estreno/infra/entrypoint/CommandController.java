@@ -2,6 +2,7 @@ package co.com.sofka.estreno.infra.entrypoint;
 
 import co.com.sofka.estreno.domain.estreno.command.AddPeliculaCommand;
 import co.com.sofka.estreno.domain.estreno.command.ConfigureEstrenoCommand;
+import co.com.sofka.estreno.domain.estreno.command.ExtractPeliculaCommand;
 import io.vertx.core.eventbus.EventBus;
 
 import javax.ws.rs.Consumes;
@@ -29,8 +30,16 @@ public class CommandController {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/AddMovie")
+    @Path("/addMovie")
     public Response executor(AddPeliculaCommand command){
+        bus.publish(command.getType(), command);
+        return Response.ok().build();
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/extractMovie")
+    public Response executor(ExtractPeliculaCommand command){
         bus.publish(command.getType(), command);
         return Response.ok().build();
     }

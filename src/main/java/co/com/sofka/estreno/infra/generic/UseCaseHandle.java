@@ -23,7 +23,7 @@ public abstract class UseCaseHandle {
         events.stream().map(event -> {
             String eventBody = EventSerializer.instance().serialize(event);
             return new StoredEvent(event.getClass().getTypeName(), new Date(), eventBody);
-        }).forEach(storedEvent -> repository.saveEvent("program", catalogoId, storedEvent));
+        }).forEach(storedEvent -> repository.saveEvent("estreno", catalogoId, storedEvent));
 
         events.forEach(busService::send);
     }

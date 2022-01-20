@@ -25,13 +25,13 @@ public class Estreno extends AggregateRoot {
     }
 
     public static Estreno from(String estrenoId, List<DomainEvent> events) {
-        var catalogo = new Estreno(estrenoId);
-        events.forEach(catalogo::applyEvent);
-        return catalogo;
+        var estreno = new Estreno(estrenoId);
+        events.forEach(estreno::applyEvent);
+        return estreno;
     }
 
-    public void addPelicula(String id, String titulo, String anio, String duracion, String sipnosis, String genero, String videoURL) {
-        appendChange(new PeliculaAdded(id, titulo, anio, duracion, sipnosis, genero, videoURL)).apply();
+    public void addPelicula(String peliculaId, String titulo, String anio, String duracion, String genero, String sipnosis, String videoURL) {
+        appendChange(new PeliculaAdded(peliculaId, titulo, anio, duracion, genero, sipnosis, videoURL)).apply();
     }
 
     public Pelicula findPeliculaById(String id) {

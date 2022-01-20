@@ -1,10 +1,9 @@
 package co.com.sofka.estreno.domain.estreno;
 
-import java.util.Objects;
 
 public final class Pelicula {
 
-    private final String id;
+    private final String peliculaId;
     private final String titulo;
     private final String anio;
     private final String duracion;
@@ -12,18 +11,18 @@ public final class Pelicula {
     private final String sipnosis;
     private final String videoURL;
 
-    public Pelicula(String id, String titulo, String anio, String duracion, String sipnosis, String genero, String videoURL) {
-        this.id = Objects.requireNonNull(id);
-        this.titulo = Objects.requireNonNull(titulo);
-        this.anio = Objects.requireNonNull(anio);
-        this.duracion = Objects.requireNonNull(duracion);
-        this.sipnosis = Objects.requireNonNull(sipnosis);
-        this.genero = Objects.requireNonNull(genero);
-        this.videoURL = Objects.requireNonNull(videoURL);
+    public Pelicula(String peliculaId, String titulo, String anio, String duracion, String sipnosis, String genero, String videoURL) {
+        this.peliculaId = peliculaId;
+        this.titulo = titulo;
+        this.anio = anio;
+        this.duracion = duracion;
+        this.sipnosis = sipnosis;
+        this.genero = genero;
+        this.videoURL = videoURL;
     }
 
-    public String id() {
-        return id;
+    public String peliculaId() {
+        return peliculaId;
     }
 
     public String titulo() {

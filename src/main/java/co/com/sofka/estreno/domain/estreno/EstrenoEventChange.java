@@ -15,7 +15,7 @@ public class EstrenoEventChange implements EventChange {
             estreno.peliculas = new HashMap<>();
         });
         listener((PeliculaAdded event) -> {
-            estreno.peliculas.put(event.getPeliculaId(), new Pelicula(event.getPeliculaId(), event.getTitulo(), event.getAnio(), event.getDuracion(), event.getSipnosis(), event.getGenero(), event.getVideoURL()));
+            estreno.peliculas.put(event.getPeliculaId(), new Pelicula(event.getPeliculaId(), event.getTitulo(), event.getAnio(), event.getDuracion(), event.getGenero(), event.getSipnosis(), event.getVideoURL()));
         });
     }
 

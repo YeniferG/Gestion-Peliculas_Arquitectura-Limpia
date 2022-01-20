@@ -36,12 +36,12 @@ public class EstrenoHandle {
     @ConsumeEvent(value = "sofka.estreno.peliculaadded", blocking = true)
     void consumePeliculaAdded(PeliculaAdded event) {
         BasicDBObject document = new BasicDBObject();
-        document.put("peliculas."+event.getPeliculaId()+".titulo", event.getTitulo());
-        document.put("peliculas."+event.getPeliculaId()+".anio", event.getAnio());
-        document.put("peliculas."+event.getPeliculaId()+".duracion", event.getDuracion());
-        document.put("peliculas."+event.getPeliculaId()+".genero", event.getGenero());
-        document.put("peliculas."+event.getPeliculaId()+".sipnosis", event.getSipnosis());
-        document.put("peliculas."+event.getPeliculaId()+".videoURL", event.getVideoURL());
+        document.put("pelicula."+event.getTitulo()+".titulo", event.getTitulo());
+        document.put("pelicula."+event.getTitulo()+".anio", event.getAnio());
+        document.put("pelicula."+event.getTitulo()+".duracion", event.getDuracion());
+        document.put("pelicula."+event.getTitulo()+".genero", event.getGenero());
+        document.put("pelicula."+event.getTitulo()+".sipnosis", event.getSipnosis());
+        document.put("pelicula."+event.getTitulo()+".videoURL", event.getVideoURL());
 
         BasicDBObject updateObject = new BasicDBObject();
         updateObject.put("$set", document);
