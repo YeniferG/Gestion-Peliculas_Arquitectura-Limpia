@@ -24,8 +24,6 @@ Rsrc/main/java/co/com/sofka/estreno/infra/repository/MongoEventStoreRepository.j
 :
 
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
-p
-@src/main/java/co/com/sofka/estreno/infra/model/DataResponse.java,2\9\299c2fde038f5dcfeded42a499919821404ed68f
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 w
@@ -42,7 +40,17 @@ y
 Isrc/main/java/co/com/sofka/estreno/usecases/ConfigurarEstrenoUseCase.java,1\7\17d0b92e95b44e83503286dc85f7abf737f294a4
 x
 Hsrc/main/java/co/com/sofka/estreno/usecases/ExtraerEstrenoException.java,d\3\d3876c3dc7fb22057b4619b0f5f696ed202fd874
-x
-Hsrc/main/java/co/com/sofka/estreno/infra/entrypoint/QueryController.java,1\b\1bd58f98584248599c5777d82cfa9f30808254ab
-|
-Lsrc/main/java/co/com/sofka/estreno/infra/handle/ConfigurarEstrenoHandle.java,4\6\466d97aa08fdb6aacc0d99c1d1a8a0850035d772
+z
+Jsrc/main/java/co/com/sofka/estreno/domain/estreno/event/EstrenoCreado.java,a\2\a229e6841f7db48c7795211b582ebea5a67441eb
+…
+Usrc/main/java/co/com/sofka/estreno/domain/estreno/command/AgregarPeliculaCommand.java,0\b\0b964e6cd5fe21273146b2ba1f30ce8fe9b88370
+z
+Jsrc/main/java/co/com/sofka/estreno/infra/handle/AgregarPeliculaHandle.java,9\a\9a9a4954e735d76a8a7099b08edc14dcbd326d68
+o
+?src/main/java/co/com/sofka/estreno/domain/estreno/Pelicula.java,2\7\27f12a94f9b04bd8c9d695b5e1950ade646f83cb
+y
+Isrc/main/java/co/com/sofka/estreno/domain/estreno/EstrenoEventChange.java,4\6\46e91f8fce0e86e379bcf57af7ea4b142d1e5800
+w
+Gsrc/main/java/co/com/sofka/estreno/usecases/AgregarPeliculaUseCase.java,d\5\d59c10140535a554a51457dae6462c5609d6694e
+…
+Usrc/main/java/co/com/sofka/estreno/domain/estreno/command/ExtraerPeliculaCommand.java,e\c\ec0abf1b7701d068a4931810516e6a682c90cc89
