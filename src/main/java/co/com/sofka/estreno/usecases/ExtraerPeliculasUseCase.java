@@ -51,13 +51,14 @@ public class ExtraerPeliculasUseCase implements Function<ExtraerPeliculaCommand,
 
                 String urlVideos = documentPelicula.getElementsByClass("tab-video").attr("data-video");
                 String titulo = documentPelicula.getElementsByTag("h1").text();
+                String imagenURL = documentPelicula.getElementById("cover").attr("src");
                 String anio = documentPelicula.getElementsByClass("info-half").text();
                 String[] datosPelicula = anio.split(" ");
                 String sipnosis = documentPelicula.getElementsByClass("sinopsis").text();
                 String generos = documentPelicula.getElementsByClass("content-type-a").text();
 
-                System.out.println("URL VIDEO: " + urlVideos);
-                estreno.agregarPelicula(UUID.randomUUID().toString().substring(0,10), titulo, datosPelicula[1], datosPelicula[3]+" "+datosPelicula[4], generos, sipnosis, urlVideos);
+                System.out.println("URL IMAGEN: " + imagenURL);
+                estreno.agregarPelicula(UUID.randomUUID().toString().substring(0,10), titulo, imagenURL, datosPelicula[1], datosPelicula[3]+" "+datosPelicula[4], generos, sipnosis, urlVideos);
 
             }
 

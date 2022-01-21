@@ -6,6 +6,7 @@ public class AgregarPeliculaCommand extends Command {
 
     private String estrenoId;
     private String peliculaId;
+    private String imagenURL;
     private String titulo;
     private String anio;
     private String duracion;
@@ -29,6 +30,14 @@ public class AgregarPeliculaCommand extends Command {
 
     public void setPeliculaId(String peliculaId) {
         this.peliculaId = peliculaId;
+    }
+
+    public String getImagenURL() {
+        return imagenURL;
+    }
+
+    public void setImagenURL(String imagenURL) {
+        this.imagenURL = imagenURL;
     }
 
     public String getTitulo() {

@@ -22,7 +22,7 @@ public class AgregarPeliculaUseCase implements Function<AgregarPeliculaCommand, 
     public List<DomainEvent> apply(AgregarPeliculaCommand command) {
         var events = repository.getEventsBy("estreno", command.getEstrenoId());
         var estreno = Estreno.from(command.getEstrenoId(), events);
-        estreno.agregarPelicula(command.getPeliculaId(), command.getTitulo(), command.getAnio(), command.getDuracion(), command.getGenero(), command.getSipnosis(), command.getVideoURL());
+        estreno.agregarPelicula(command.getPeliculaId(), command.getTitulo(), command.getImagenURL(), command.getAnio(), command.getDuracion(), command.getGenero(), command.getSipnosis(), command.getVideoURL());
         return estreno.getUncommittedChanges();
     }
 

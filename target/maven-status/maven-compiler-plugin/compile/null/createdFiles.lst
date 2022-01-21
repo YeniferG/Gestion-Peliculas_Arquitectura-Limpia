@@ -2,7 +2,6 @@ co\com\sofka\estreno\domain\generic\ChangeEventSubscriber$ChangeApply.class
 co\com\sofka\estreno\domain\generic\ChangeEventSubscriber.class
 co\com\sofka\estreno\infra\entrypoint\SocketService.class
 co\com\sofka\estreno\domain\generic\EventStoreRepository.class
-co\com\sofka\estreno\infra\model\DataResponse.class
 co\com\sofka\estreno\infra\message\BusService$1.class
 co\com\sofka\estreno\usecases\AgregarPeliculaUseCase.class
 co\com\sofka\estreno\domain\estreno\command\ExtraerPeliculaCommand.class

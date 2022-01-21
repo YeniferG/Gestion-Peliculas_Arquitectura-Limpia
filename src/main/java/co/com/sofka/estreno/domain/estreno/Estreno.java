@@ -30,8 +30,8 @@ public class Estreno extends AggregateRoot {
         return estreno;
     }
 
-    public void agregarPelicula(String peliculaId, String titulo, String anio, String duracion, String genero, String sipnosis, String videoURL) {
-        appendChange(new PeliculaAgregada(peliculaId, titulo, anio, duracion, genero, sipnosis, videoURL)).apply();
+    public void agregarPelicula(String peliculaId, String titulo, String imagenURL, String anio, String duracion, String genero, String sipnosis, String videoURL) {
+        appendChange(new PeliculaAgregada(peliculaId, titulo, imagenURL, anio, duracion, genero, sipnosis, videoURL)).apply();
     }
 
     public Pelicula findPeliculaById(String id) {

@@ -37,6 +37,7 @@ public class EstrenoHandle {
     void consumePeliculaAdded(PeliculaAgregada event) {
         BasicDBObject document = new BasicDBObject();
         document.put("pelicula."+event.getTitulo()+".titulo", event.getTitulo());
+        document.put("pelicula."+event.getTitulo()+".imagenURL", event.getImagenURL());
         document.put("pelicula."+event.getTitulo()+".anio", event.getAnio());
         document.put("pelicula."+event.getTitulo()+".duracion", event.getDuracion());
         document.put("pelicula."+event.getTitulo()+".genero", event.getGenero());

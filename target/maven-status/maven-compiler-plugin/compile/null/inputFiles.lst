@@ -14,7 +14,6 @@ D:\Documents\TRAINING SOFKA U\Arquitectura-Software\Proyecto-Estrenos_Arquitectu
 D:\Documents\TRAINING SOFKA U\Arquitectura-Software\Proyecto-Estrenos_Arquitectura-Limpia\src\main\java\co\com\sofka\estreno\usecases\ConfigurarEstrenoUseCase.java
 D:\Documents\TRAINING SOFKA U\Arquitectura-Software\Proyecto-Estrenos_Arquitectura-Limpia\src\main\java\co\com\sofka\estreno\infra\generic\StoredEventSerializer.java
 D:\Documents\TRAINING SOFKA U\Arquitectura-Software\Proyecto-Estrenos_Arquitectura-Limpia\src\main\java\co\com\sofka\estreno\domain\estreno\command\ExtraerPeliculaCommand.java
-D:\Documents\TRAINING SOFKA U\Arquitectura-Software\Proyecto-Estrenos_Arquitectura-Limpia\src\main\java\co\com\sofka\estreno\infra\model\DataResponse.java
 D:\Documents\TRAINING SOFKA U\Arquitectura-Software\Proyecto-Estrenos_Arquitectura-Limpia\src\main\java\co\com\sofka\estreno\domain\generic\DomainEvent.java
 D:\Documents\TRAINING SOFKA U\Arquitectura-Software\Proyecto-Estrenos_Arquitectura-Limpia\src\main\java\co\com\sofka\estreno\infra\entrypoint\QueryController.java
 D:\Documents\TRAINING SOFKA U\Arquitectura-Software\Proyecto-Estrenos_Arquitectura-Limpia\src\main\java\co\com\sofka\estreno\domain\generic\Command.java
